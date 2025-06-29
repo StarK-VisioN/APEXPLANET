@@ -1,0 +1,196 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  background-color: black;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.navbar {
+  background: rgb(227, 225, 225);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+}
+
+.navbar h1 {
+  color: #050505;
+  font-weight: 700;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #555;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.navbar nav a:hover {
+  color: #667eea;
+}
+
+/* Main Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 1rem;
+  margin: 1rem;
+  padding: 0 2rem;
+}
+
+/* Section Base Styles */
+section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+
+section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: black;
+  border-radius: 2px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: small;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #e1e5e9;
+  border-radius: 5px;
+  font-size: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: black;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Button Styles */
+button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+/* To-Do Section Styles */
+.todo-inputs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo-inputs input {
+  flex: 1;
+}
+
+.todo-inputs button {
+  padding: 0.5rem 1rem;
+}
+
+/* Task List Styles */
+#taskList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+#taskList li {
+  background-color: #e1e5e9;
+  padding: 0.3rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskList li.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+  border-left-color: #28a745;
+}
+
+.task-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+}
+
+.complete-btn {
+  background: #28a745;
+}
+
+
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline-offset: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}

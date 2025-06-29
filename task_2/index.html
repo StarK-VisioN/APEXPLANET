@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intermediate HTML, CSS, JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <h1>My Web Practice</h1>
+    <nav>
+      <a href="#contact">Contact</a>
+      <a href="#todo">To-Do List</a>
+    </nav>
+  </header>
+
+  <!-- Grid Layout -->
+  <main class="grid-container">
+    
+    <!-- Contact Form -->
+    <section class="form-section" id="contact">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="name" required />
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="email" required />
+
+        <label>Message:</label>
+        <textarea id="message" placeholder="message..." required></textarea>
+
+        <button type="submit">Submit</button>
+        <p id="formError" class="error"></p>
+      </form>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="todo-section" id="todo">
+      <h2>To-Do List</h2>
+      <div class="todo-inputs">
+        <input type="text" id="taskInput" placeholder="Enter new task..." />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <ul id="taskList"></ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
